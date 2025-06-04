@@ -16,7 +16,6 @@
 ### 📱 Responsive & Clean UI
 Modern, responsive layout built with **HTML, CSS, and Vanilla JS** — optimized for both desktop and mobile use.
 
----
 ## 🖼️ Preview
 
 > ![Preview Screenshot](preview.png)
