@@ -9,7 +9,7 @@
 - ⏰ **Set Due Date & Time**
 - 🟢 **Priority Tags (High/Medium/Low)**
 - ✅ **Mark Tasks as Complete/Incomplete**
-- 🔍 **Search Tasks Instantly**
+- 🔍 **Search and filter tasks in real-time**
 - 🗂️ **Tabs: All / Pending / Completed**
 - 💾 **Auto-Save with localStorage**
 
