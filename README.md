@@ -3,7 +3,6 @@
 
 **TaskBlink** is a sleek and powerful web-based To-Do List Manager that helps you manage daily tasks, prioritize work, and stay organized — all from your browser with **zero installations**. It offers a seamless UI, smart sorting, and built-in local storage support.
 
----
 
 ## 🚀 Key Features
 
@@ -12,9 +11,6 @@ Easily create tasks with **titles, descriptions, priorities, due dates, and time
 
 ### 🕐 Smart Due Date Tracking
 Visual cues highlight **overdue** tasks and show upcoming deadlines, helping you stay ahead of schedule.
-
-### ✅ One-Click Task Completion
-Mark tasks as **complete/incomplete** with a single click. Completed tasks move to a separate section.
 
 ### 🟢 Priority Levels with Color Tags
 Classify tasks as **High**, **Medium**, or **Low** priority. Colored badges make scanning tasks quick and intuitive.
