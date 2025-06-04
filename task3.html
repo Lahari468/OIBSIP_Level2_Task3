@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Manager</title>
+    <link rel="stylesheet" href="task3.css">   
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TaskBlink</h1>
+            <p class="subtitle">Organize your work and boost productivity</p>
+        </header>
+        
+        <div class="action-bar">
+            <button class="add-task-btn" onclick="openAddTaskModal()">+ Add New Task</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Search tasks...">
+                <button>Search</button>
+            </div>
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="filterTasks('all')">All Tasks</div>
+            <div class="tab" onclick="filterTasks('pending')">Pending</div>
+            <div class="tab" onclick="filterTasks('completed')">Completed</div>
+        </div>
+        
+        <div id="all-tasks" class="task-section">
+            <h2>Pending Tasks</h2>
+            <div id="pending-tasks-container">
+                <p class="empty-message">No pending tasks. Add a new task to get started!</p>
+            </div>
+        </div>
+        
+        <div id="completed-tasks" class="task-section">
+            <h2>Completed Tasks</h2>
+            <div id="completed-tasks-container">
+                <p class="empty-message">No completed tasks yet. Complete some tasks to see them here!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="add-task-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Task</h2>
+                <button class="close-btn" onclick="closeAddTaskModal()">&times;</button>
+            </div>
+            
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-title" class="required">Title</label>
+                    <input type="text" id="task-title" placeholder="Enter task title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="task-description">Description</label>
+                    <textarea id="task-description" placeholder="Enter task description"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Priority</label>
+                    <div class="priority-options">
+                        <div class="priority-option">
+                            <input type="radio" id="priority-high" name="priority" value="high">
+                            <label for="priority-high">High</label>
+                        </div>
+                        <div class="priority-option">
+                            <input type="radio" id="priority-medium" name="priority" value="medium" checked>
+                            <label for="priority-medium">Medium</label>
+                        </div>
+                        <div class="priority-option">
+                            <input type="radio" id="priority-low" name="priority" value="low">
+                            <label for="priority-low">Low</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="date-time-group">
+                        <div class="date-input">
+                            <label for="due-date">Due Date</label>
+                            <input type="date" id="due-date">
+                        </div>
+                        <div class="time-input">
+                            <label for="due-time">Due Time</label>
+                            <input type="time" id="due-time">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeAddTaskModal()">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="saveTask()">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="task3.js"></script>     
+    
+</body>
+</html>

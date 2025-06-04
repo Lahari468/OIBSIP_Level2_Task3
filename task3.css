@@ -1,0 +1,361 @@
+:root {
+    --primary-color: #2b6cb0;  
+    --secondary-color: #3182ce; 
+    --accent-color: #38b2ac;  
+    --light-color: #f7fafc;
+    --dark-color: #2d3748;
+    --success-color: #48bb78;  
+    --danger-color: #f56565; 
+    --warning-color: #ed8936;
+    --border-color: #e2e8f0;
+    --text-color: #2d3748;
+    --text-light: #718096;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    background-image: linear-gradient(to bottom, #ffffff, #f0f4f8);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.action-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px 0 0 6px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 0 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+.add-task-btn {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.add-task-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.tab.active {
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.task-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.task-section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.empty-message {
+    text-align: center;
+    color: #6c757d;
+    padding: 30px;
+    font-style: italic;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.required::after {
+    content: " *";
+    color: var(--danger-color);
+}
+
+.priority-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.priority-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.priority-option input[type="radio"] {
+    margin: 0; 
+    position: relative;
+    top: 0; 
+    width: 16px;
+    height: 16px;
+}
+
+.priority-option label {
+    margin: 0; 
+    user-select: none; 
+}
+
+.date-time-group {
+    display: flex;
+    gap: 15px;
+}
+
+.date-input, .time-input {
+    flex: 1;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Task List Items */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-title {
+    font-weight: 500;
+    margin: 0 0 5px 0;
+}
+
+.task-description {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0;
+}
+
+.task-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.task-priority {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.priority-high {
+    background-color: #ffdddd;
+    color: #dc3545;
+}
+
+.priority-medium {
+    background-color: #fff3cd;
+    color: #fd7e14;
+}
+
+.priority-low {
+    background-color: #d4edda;
+    color: #28a745;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.complete-btn {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.edit-btn {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.delete-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.completed {
+    opacity: 0.7;
+}
+
+.completed .task-title {
+    text-decoration: line-through;
+}
